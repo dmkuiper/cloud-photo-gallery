@@ -1,0 +1,47 @@
+<%- include('partials/header', { title: 'Login – Cloud Photo Gallery', username: null }) %>
+
+<div class="auth-wrapper">
+  <div class="auth-card">
+    <div class="auth-logo">&#128247;</div>
+    <h1 class="auth-title">Cloud Photo Gallery</h1>
+    <h2 class="auth-subtitle">Sign in to your account</h2>
+
+    <% if (error) { %>
+      <div class="alert alert-error"><%= error %></div>
+    <% } %>
+
+    <form action="/login" method="POST" class="auth-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter your username"
+          required
+          autocomplete="username"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+          autocomplete="current-password"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+    </form>
+
+    <p class="auth-switch">
+      Don&apos;t have an account? <a href="/register">Create one</a>
+    </p>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

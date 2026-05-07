@@ -1,0 +1,15 @@
+<%- include('partials/header', { title: '404 – Page Not Found', username: username || null }) %>
+
+<div class="auth-wrapper">
+  <div class="auth-card" style="text-align:center;">
+    <div class="auth-logo">&#128247;</div>
+    <h1 style="font-size:4rem;margin:0;">404</h1>
+    <h2>Page Not Found</h2>
+    <p>The page you&apos;re looking for doesn&apos;t exist.</p>
+    <a href="<%= username ? '/photos/gallery' : '/login' %>" class="btn btn-primary" style="margin-top:1rem;">
+      Go Home
+    </a>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

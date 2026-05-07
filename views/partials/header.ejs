@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= typeof title !== 'undefined' ? title : 'Cloud Photo Gallery' %></title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<% if (typeof username !== 'undefined' && username) { %>
+<nav class="navbar">
+  <a href="/photos/gallery" class="nav-brand">&#128247; Cloud Gallery</a>
+  <div class="nav-links">
+    <a href="/photos/gallery">Gallery</a>
+    <a href="/photos/upload">Upload</a>
+    <span class="nav-user">&#128100; <%= username %></span>
+    <a href="/logout" class="btn-logout">Logout</a>
+  </div>
+</nav>
+<% } %>
