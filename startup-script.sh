@@ -42,6 +42,7 @@ Type=simple
 User=root
 ExecStart=/usr/local/bin/cloud-sql-proxy \
     --unix-socket /cloudsql \
+    --private-ip \
     ${DB_CONNECTION_NAME}
 Restart=always
 RestartSec=5
